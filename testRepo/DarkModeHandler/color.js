@@ -1,17 +1,21 @@
-function setColor(color) {
-  document.querySelector('body').style.color = color;
+// Part of Body
+var Body = {
+  setColor: function(color) {
+    document.querySelector('body').style.color = color;
+  },
+  setBackgroundColor : function(color){
+    document.querySelector('body').style.backgroundColor = color;
+  }
 }
-function setBackgroundColor(color){
-  document.querySelector('body').style.backgroundColor = color;
-}
+// ModeChangeHandler
 function ModeChangeHandler(self) {
   if(self.value === 'DARK'){
-    setColor('white');
-    setBackgroundColor('black');
+    Body.setColor('white');
+    Body.setBackgroundColor('black');
     self.value ='DAY';
   } else {
-    setColor('black');
-    setBackgroundColor('white');
+    Body.setColor('black');
+    Body.setBackgroundColor('white');
     self.value ='DARK';
   }
 }
