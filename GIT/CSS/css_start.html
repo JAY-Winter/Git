@@ -3,32 +3,58 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <!-- css 선언 style -->
 <style media="screen">
+  body {
+    margin : auto;
+  }
   h1{
     text-align: center;
     font-size: 60px;
     margin: auto;
+    padding: 20px;
+    border-bottom: 1px solid gray;
   }
+  ol{
+    border-right : 1px solid gray;
+    width: 30px;
+    margin: 0;
+    padding: 20px;
+    }
   .saw{
     color : gray;
   }
   .active{
     color : red;
   }
-  a {
-    color : black ;
-
+  #grid{
+    display: grid;
+    grid-template-columns: 100px 5fr;
   }
 </style>
-
   </head>
   <body>
     <h1>LIFE</h1>
-<ol>
-    <li><a href="#" class="saw">A</a></li>
-    <li><a href="#" class="saw active">B</a></li>
-    <li><a href="#">C</a></li>
-    <li><a href="#">D</a></li>
-</ol>
+  <div id="grid">
+    <ol>
+      <li><a href="#" class="saw">A</a></li>
+      <li><a href="#" class="saw active">B</a></li>
+      <li><a href="#">C</a></li>
+      <li><a href="#">D</a></li>
+    </ol>
+    <div>
+    <h2>IM GONNA BE</h2>
+    <p>
+    아직 나는 어떤 직업을 가져야하는 지,
+    어떤 일을 해야하는 지 잘 모르고 정하지 못했다.
+    하지만 어떻게 살아야 재밌는진 잘 안다.
+    내가 머리 속으로만 그리던 재밌는 일을
+    남들에게 보여주고 그들과 내가 만족하는 모습.
+    그것이 나에게 재미이고 원동력이다.
+
+    안전한 길에서 벗어나는 게 무척이나 두렵지만
+    미래를 생각하면 심장이 뛰는 지금의 내가 좋다
+  </div>
+</div>
   </body>
 </html>
