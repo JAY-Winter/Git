@@ -6,37 +6,40 @@
     <style>
       .container {
         display : grid;
-        grid-template-columns : repeat(3, 1fr);
-        grid-template-row : repeat(3,1fr);
+        grid-template-columns : repeat(4, 1fr);
+        grid-template-row : repeat(4,1fr);
         grid-template-areas :
-        "hd hd hd"
-        "io io io"
-        "ft ft ft";
+        "hd hd hd hd"
+        "ig ig ig ig "
+        "io io io io"
+        "ft ft ft ft";
         grid-gap : 30px;
       }
       .header {
         grid-area : hd;
-        border : 2px red;
         background : red;
         height: 20vh;
       }
+      .header > #img{
+        grid-area : ig;
+        width: 100px;
+        height: 100px;
+      }
       .info {
         grid-area : io;
-        border : 2px blue;
         background : blue;
       }
       .footer {
         grid-area : ft;
-        border : 2px black;
         background : black;
       }
     </style>
   </head>
   <body>
-<div class="container">
-    <div class="header">header</div>
-    <div class="info">info</div>
-    <div class="footer">footer</div>
-</div>
+  <div class="container">
+      <div class="header" id="img"><img src="test.JPG"></div>
+      <div class="info">info</div>
+      <div class="footer">footer</div>
+  </div>
   </body>
 </html>

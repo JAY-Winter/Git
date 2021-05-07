@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>shoes_hoe_shoe</title>
+<style media="screen">
+body{
+  margin: 0px;
+}
+.header{
+    display: grid;
+    grid-area: hd;
+    margin:0.5%;
+    place-items : center;
+    /* margin-right: auto;
+    margin-left: auto; */
+    width: 150px;
+    padding-top: 1px;
+}
+.a>img{
+  display: grid;
+  place-items : center;
+  width: 150px;
+  border-radius : 14px;
+  margin : 10px;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+              "hd hd hd hd hd hd hd hd hd hd hd hd"
+              "ph ph ph ph ph ph ph ph ph ph ph ph"
+              "ph ph ph ph ph ph ph ph ph ph ph ph";
+  /* place-items: center; */
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 30px;
+  background-color : #1e50c1;
+}
+.grid-item {
+  display: grid;
+  place-items : center;
+  width: 100%;
+  border-radius: 14px;
+  margin: 10px;
+}
+.photo {
+  grid-area : ph;
+  display: grid;
+  /* place-items : center; */
+  width: 150px;
+  border-radius : 14px;
+  margin : 10px;
+}
+.photo #img {
+  display: grid;
+  /* place-items : center; */
+  width: 150px;
+  border-radius : 14px;
+  /* margin : 10px; */
+}
+
+</style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- <div class="a">
+        <a href="file:///Users/heyon/Desktop/raffle/main_page/main_page.html">
+          <img src="logo_hoe.png">
+        </a> -->
+      <!-- </div> -->
+        <div class="photo"><img id="img" src="993.png"></div>
+        <!-- <div class="photo"><img src="574(6).png"></div>
+        <div class="photo"><img src="993.png"></div> -->
+      </div>
+  </body>
+</html>
