@@ -1,15 +1,1 @@
-# Git
-
-  <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <p>HTML
-  <p>CSS
-  <p>JAVASCRIPT
-  <img src="/Users/heyon/Desktop/README.png">
-  </body>
-</html>
+![README](https://user-images.githubusercontent.com/81538994/117435985-6c664280-af69-11eb-952e-cd7b3152a4db.png)
