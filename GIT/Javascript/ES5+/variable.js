@@ -3,6 +3,9 @@
 // use this for Valina Javascript
 'use strict';
 
+let a;
+a = 1; 
+
 // 2. variable 
 // 변수 선언 let ! 
 let globalName = ' global name';
@@ -69,4 +72,3 @@ console.log(`value : ${text}, type : ${typeof text}`);
 text = '8 '/'2';
 console.log(`value : ${text}, type : ${typeof text}`);
 
-commit test
