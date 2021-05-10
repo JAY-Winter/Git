@@ -50,13 +50,25 @@ block scope 에서 정의된 변수 age 가
 block 밖에서도 실행되는 모습을 볼 수 있다.
 
 
- 3. Constants
+ 2. Constants
  favor immutable data type always for a few reasons
  - security
  - thread safety
  - reduce human mistakes
 
+2-1. Variable / Constant
+ - Variable : Read, Write 가능
+- Constant : Only Read 가능
 
- 4. Variable types
+2-2. Immutable / Mutable
+- Immutable data types : premitive, frozen objects
+
+- Mutable data types : 
+all objects by default are mutalbe in JS
+    - security
+    - thread safety
+    - reduce human mistakes
+
+ 3. Variable types
  primitive, single item  : number, string, boolean, null, undefined, symbol
 object,box contatiner, function, first-class function 

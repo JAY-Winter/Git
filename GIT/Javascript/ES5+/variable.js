@@ -9,7 +9,6 @@ a = 1;
 // 2. variable 
 // 변수 선언 let ! 
 let globalName = ' global name';
-
 {
     let name = 'jay';
     console.log(name);
@@ -72,3 +71,5 @@ console.log(`value : ${text}, type : ${typeof text}`);
 text = '8 '/'2';
 console.log(`value : ${text}, type : ${typeof text}`);
 
+//6. object
+const 
