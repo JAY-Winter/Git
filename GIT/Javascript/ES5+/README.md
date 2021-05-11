@@ -1,3 +1,4 @@
+/h1 variable.js 
 0. 'use strict'
 use strict 에 대해 생각해보기 전,
 우리는 Javascript 의 역사에 대해 먼저 생각해볼 필요가 있다.
@@ -72,3 +73,7 @@ all objects by default are mutalbe in JS
  3. Variable types
  primitive, single item  : number, string, boolean, null, undefined, symbol
 object,box contatiner, function, first-class function 
+
+/h1 operator.js
+
+1. String 
