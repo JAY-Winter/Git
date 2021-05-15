@@ -2,12 +2,13 @@ const puppeteer = require('puppeteer');
 
 (async () => {
     const browser = await puppeteer.launch({
-        headless : false, defaultViewport : null,
+        headless : false,
+        defaultViewport :  null }
         
-    });
+    );
     const page = await browser.newPage();
     await page.goto('https://www.etoos.com/member/login.asp?returnUrl=http://247.etoos.com/lms/index.do');  
-      
+    
     await page.type('#mem_id', 'id');
     await page.type('#pwdtmp', 'pw');
     // #id, #pw 추출과 비교
@@ -23,23 +24,17 @@ const puppeteer = require('puppeteer');
     // 위와 동일
     // loging -> main_page -> my247_page -> DailyTest -> Table text 추출 
     await page.waitForNavigation;
-    
+    // await page.setViewport(null);
 
-    // Table Text 추출
-    const selector = '#container > div.contents > div.wrap_tbl_sdw.mgt_30 > table > tbody > tr:nth-child(1) > td:nth-child(4)';
-    await page.waitForSelector(selector);
-    data = await page.$eval(selector,(element) => element.textContent);
-    
+    await page.setUserAgent( 'UA-TEST' );
+    await page.waitForSelector('#container > div.contents > div.wrap_tbl_sdw.mgt_30');
+
+    // Table 추출
+    const data = await page.evaluate(()=> {
+        const tds = Array.from(document.querySelectorAll('#container > div.contents > div.wrap_tbl_sdw.mgt_30'))
+        return tds.map(td => td.innerText)
+    });
     console.log(data);
 
+  
 })();
-
-
-한지수 : #container > div.contents > div.wrap_tbl_sdw.mgt_30 > table > tbody > tr:nth-child(1) > td:nth-child(4)
-응시일 : #container > div.contents > div.wrap_tbl_sdw.mgt_30 > table > tbody > tr:nth-child(1) > td:nth-child(7)
-
-전희상 : #container > div.contents > div.wrap_tbl_sdw.mgt_30 > table > tbody > tr:nth-child(2) > td:nth-child(4)
-응시일 : #container > div.contents > div.wrap_tbl_sdw.mgt_30 > table > tbody > tr:nth-child(2) > td:nth-child(7)
-
-전희상 : #container > div.contents > div.wrap_tbl_sdw.mgt_30 > table > tbody > tr:nth-child(3) > td:nth-child(4)
-응시일 : #container > div.contents > div.wrap_tbl_sdw.mgt_30 > table > tbody > tr:nth-child(3) > td:nth-child(7)
