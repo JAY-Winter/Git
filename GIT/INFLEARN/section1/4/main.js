@@ -1,0 +1,9 @@
+// 섹션1 문제 4 재풀이(2)
+
+function solution(N){
+    let answer = 0;
+    for(let i = 1; i <= N; i++) answer += i; 
+    return answer;
+}
+
+console.log(solution(6));
