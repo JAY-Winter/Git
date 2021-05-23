@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+
+function solution(s, t) {
+    let answer=[];
+    s = s.toLowerCase();
+    let p = 0;
+    for(let i=0; i<s.length; i++){        
+        if(s[i] !== t) {
+            p++;
+            answer.push(p);        
+        }else{
+            p=0;
+            answer.push(p);
+        }
+    }
+    p=0;
+    for(let j=s.length-1; j>=0; j--){
+        if(s[j] !== t){
+            p++
+            answer.push(p);
+        }else{
+            p=0;
+            answer.push(p);
+        }
+    }
+return answer;
+}
+
+let str = "teachermode";
+console.log(solution(str,'e'));
+</script>
+
+</body>
+</html>
