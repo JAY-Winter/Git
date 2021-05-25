@@ -11,30 +11,30 @@
 
         function solution(arr) {
         
-            let answer = [];
-            let max =Number.MAX_SAFE_INTEGER;
+            let reverse = [];
+            let answer =[];
             for(let i=0; i<arr.length; i++){
                 arr[i] = parseInt(arr[i].toString().split("").reverse().join(""));
-                answer.push(arr[i]);
-                for(let j=2; j<=Math.floor(Math.sqrt(answer[i])); j++){
-                    if(answer[i]%j === 0){
-
-                    answer.splice(answer[i]);
-                //     }else if(arr[i]%j )
-                }
+                reverse.push(arr[i]);
             }
-            
-            return answer;
-            
+            for(let x of reverse){
+                if(x%2 ===1){
+                    answer.push(x);
+                }else if(x===1)
+                    answer.splice();
+            }           
+        return answer;
+}
 
-            
-        }
-
-
+// 소수골라내야함
 
         let arr = [32, 55, 62, 20, 250, 370, 200, 30, 100];
-
+        
         console.log(solution(arr));
+
+        
+    // output : [23, 55, 26, 2, 52, 73, 2, 3,1];
+
     </script>
 </body>
 </html>
