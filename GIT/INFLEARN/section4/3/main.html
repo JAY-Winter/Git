@@ -8,24 +8,39 @@
 </head>
 <body>
     <script>
-        function solution(a1,a2,a3){
-            let answer = [];
+function solution(arr1,arr2,arr3){
+    
+    
+    let m = arr1.length;
+    let answer = [];
+    let array;
 
-            for(let i=0; i<a1.length; i++){
-                for (j=i+1; j<a1.length; j++){
-                    answer.push(a1[i]);
-                }
-            }
-            return answer;
+    for(let i =0; i<m; i++){
+        for(let j=i+1; j<m; j++){
+            answer.push(arr1[i],arr1[j]);
+            array = answer;
         }
+    }
+    for(let k=0; k<m; k++){
+        cnt  = array.slice(k,k+2);   
+        document.write(cnt);
+    }
+    
+    return answer;
+}
 
-        let arr1 = [3,4,1,2];
-        let arr2 = [4,3,2,1];
-        let arr3 = [3,1,4,2];
-        console.log(solution(arr1,arr2,arr3));
+let arr1 = [3,4,1,2];
+let arr2 = [4,3,2,1];
+let arr3 = [3,1,4,2];
 
+
+console.log(solution(arr1,arr2,arr3));
     </script>
     
     
 </body>
 </html>
+<!-- 
+(3,4) (3,1) (3,2) (4,1) (4,2) (1,2)
+(4,3) (4,2) (4,1) (4,3) (3,1) (2,1)
+(3,1) (3,4) (3,2) (1,4) (1,2) (4,2) -->

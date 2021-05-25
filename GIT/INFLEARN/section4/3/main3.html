@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function solution(test){
+
+            let answer = 0;
+            let n = arr.length;
+            let m = arr[0].length;
+
+            for(let i=1; i<=m; i++){
+                // 멘토 1~4
+                for(let j=1; j<=m; j++){
+                // 멘티 1~4
+                    let cmt =0;
+                // 멘토, 멘티 설정 후 test[k][s] 를 통해 멘티 등수가 멘토 등수보다 크면(못봤으면) ++ 하기 위한 변수설정
+                    for(let k=0; k<n; k++){
+                // 게임 횟수
+                        let pi = pj =0;
+                        // 등수 
+                        for(let s=0; s<n; s++){
+                // 게임별 등수
+                            if(test[k][s] === i) pi = s;
+                            if(test[k][s] === j) pj = s;
+                // 
+                        }
+                        if(pi < pj) cmt++;
+                    }
+                    if(cmt === n) answer++;
+                }
+            }
+            return answer;
+        }
+
+
+        let arr = [[3,4,1,2],[4,3,2,1],[3,1,4,2]];
+        console.log(solution(arr));
+    </script>
+</body>
+</html>
