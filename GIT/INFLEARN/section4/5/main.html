@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function solution(N,K,arr){
+
+            let max = Number.MIN_SAFE_INTEGER;
+            let answer =[];
+
+            for(let i=0; i<N; i++){
+
+                for(let j=0; j<N; j++){
+
+                    for(let k=0; k<N; k++){
+
+                        let sum = arr[i]+arr[j]+arr[k];
+                        while(sum){
+                            answer.push(sum);
+                            console.log(answer);
+                        }
+                        
+
+
+                    }
+
+                }
+            }
+
+        }
+
+        let arr = [13, 15, 34, 23, 45, 65, 33, 11, 26, 42];
+        console.log(solution(10,3,arr));
+    </script>
+</body>
+</html>

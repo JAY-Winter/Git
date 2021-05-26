@@ -9,39 +9,40 @@
 <body>
     <script>
         
-        function Graduation(present){
+        function solution(m, product){
+            
+            let answer = 0;
+            let n = product.length; // 5
+            
+            product.sort((a,b) => (a[0]+a[1])-(b[0]+b[1]));
+            // a[0] : 상품가격, a[1] : 배송비
+            // b[0] : 싱픔기격, b[1] : 배송비
+            // 기존 arr 을 오름차순 으로 바꾸는 이유
+            // 가장 작은 수부터 나열한 뒤 위에서 차례대로 할인율을 적용한 경우의 수를 구한다
+
+            for(let i =0; i<n; i++){
+
+                let money = m - (product[i][0]/2)+(product[i][1]); // 총 금액 - 할인된 제품 가격 + 배송비
+                let cnt = 1;
+
+                for(let j=0; j<n; j++){
+                    
+                    if(j !== i && money < product[j][0]+product[j][1]) break; 
+                    if(j !== i && money >= product[j][0]+product[j][1]){
+                        money -= product[j][0]+product[j][1];
+                        cnt++;
+                    }
+                    answer = Math.max(answer, cnt);
+                }
+                return answer;
+            }
+            
 
             
-            let n = arr.length;
-            let p = arr[0].length;
-            let answer =0;
-            let cnt = 1;
-            let maxB = 28;
-            let cost =1;
-
-            for(let i=j=0; i<n; i++){
-                
-                let sale = (present[i][j]/2);
-                // sale = 3 1 2 2 5
-                for(let k=0; k<p; k++){
-                    if(할인이 적용됐을 때){
-                        && (sale[i])+(present[i][cost])+(present[i+1][k])=28;
-                                                        present[i+1] 하면 만약에 i=1 이면 i=0 인건 안더해짐
 
 
-
-
-                    }
-                    
-                }
-
-
-
-
-                
-            }
-            return answer;
         }
+        
 
         let arr= [
             [6,6],
@@ -51,7 +52,43 @@
             [10,3]
         ];
 
-        console.log(Graduation(arr));
+        console.log(solution(28, arr));
+//  아래부터 test
+        // let arr1 =[
+        //     '선생님',
+        //     '과외',
+        //     '매드몬스터'
+        // ];
+        
+        // let arr2 =[
+        //     '아',
+        //     '에이',
+        //     '오우야이'
+        // ];
+
+        // let arr3 =[
+        //     [6],
+        //     [3],
+        //     [1],
+        //     [2],
+        //     [7]
+        // ];
+
+        // let c = arr1.map(function(element){
+        //     return element.length;
+        // });
+        // console.log(c);
+        
+
+        // let d = arr2.map((element)=> {
+        //     return element;
+        // });
+        // console.log(d);
+
+        // let e = arr3.sort((sort_test)=>{
+        //     return sort_test;
+        // });
+        // console.log(e);
     </script>
 </body>
 </html>
