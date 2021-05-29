@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // let myMap = new Map()
+        // myMap.set(0,"영");
+        // myMap.set(1,"일");
+
+        //     let answer =0;
+        // if(myMap.has("영")) answer++; 
+        // console.log("Yes");
+        // if(myMap.has(1)) myMap.set("하나", "sex");
+        // console.log(myMap);
+
+    function solution(S){
+        
+        let answer;
+        let sH = new Map();
+
+        for(let x of S){
+            if(sH.has(x)) sH.set(x, sH.get(x)+1);
+            // .has(key) : 주어진 key 에 해당하는 value 값 반환, 없을 시 undefined
+            // .set(key,value) : Map 객체에 주어진 key에 값 value를 집어넣고, Map 객체 반환
+            // .get(key) : 주어진 key 에 해당되는 값 value 반환, 없을 시 undefiend
+            else sH.set(x,1);
+console.log(sH);
+
+        let max = Number.MIN_SAFE_INTEGER;
+        for(let [key, value] of sH){
+            if(value > max) {
+                max = value;
+                answer = key;
+            }
+        }
+
+    }
+    return answer;
+}        
+
+    let str = "BACBACCACCBDEDE";
+    console.log(solution(str));
+    </script>
+</body>
+</html>

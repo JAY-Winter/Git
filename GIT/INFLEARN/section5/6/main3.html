@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let answer;
+        let sH =new Map();
+        // new : 객체 생성 연산자
+
+        function solution(S){
+
+            for(let x of S){
+                if(sH.has(x)) sH.set(x, sH.get(x)+1);
+                else sH.set(x,1);
+                console.log(sH);
+
+                // else 구문 왜? : 현재 sH.set 값이 없음
+                    // .set(key, value)
+                    // .get(key)
+
+                let max = Number.MIN_SAFE_INTEGER;
+
+                for(let [key, value] of sH){
+                    if(value > max){
+                        max = value;
+                        answer = key;
+                    }
+                }
+
+            }
+
+return answer;
+        }
+
+        let str = "BACBACCACCBDEDE";
+        console.log(solution(str));
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function solution(N, A){
+
+        let answer1 = answer2 = answer3 = answer4 = answer5 =0;
+        let answer;
+        for(let x of A){
+            if(x==='A') answer1++;
+            else if(x==='B') answer2++;
+            else if(x==='C') answer3++;
+            else if(x==='D') answer4++;
+            else if(x==='E') answer5++;
+
+            answer = Math.max(answer1,answer2,answer3,answer4,answer5); 
+            
+        }
+    return answer;
+
+    }
+
+
+    let arr =['B','A','C','B','A','C','C','A','C','C','B','D','E','D','E'];
+    
+    console.log(solution(15,arr))
+</script>
+</body>
+</html>
