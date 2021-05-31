@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 1. 아나그램 판별
+// 2. map() 이용해 새로운 객체 생성
+// 3. 각 str 알파벳 과 개수 파악
+// 4. 각 str 이 같으면 YES or No
+
+
+function solution(S1, S2){
+
+    // S1 = S1.sort((a,b)=> a-b);
+    // S2 = S2.sort((a,b)=> a-b);
+    
+
+    let sH1 = new Map();
+    let sH2 = new Map();
+    let answer;
+
+    for(let x of S1){
+
+        if(sH1.has(x)) sH1.set(x, sH1.get(x)+1);
+        else(sH1.set(x,1));
+    }
+
+    for(let x of S2){
+
+    if(sH2.has(x)) sH2.set(x, sH2.get(x)+1);
+    else(sH2.set(x,1));
+    }
+    
+    console.log(sH1);
+    console.log(sH2);
+    
+    return answer;
+    
+
+
+}
+
+
+        let str1 = "AbaAeCe";
+        // let str2 = "AbaAeCe";
+        let str2 = "baeeACA";
+        console.log(solution(str1, str2));
+
+    </script>
+</body>
+</html>
