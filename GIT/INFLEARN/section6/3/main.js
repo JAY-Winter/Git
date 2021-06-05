@@ -2,6 +2,7 @@
 function solution(B,M){
 
     let stack = [];
+
     let n = B.length;
     let answer=0;
 
