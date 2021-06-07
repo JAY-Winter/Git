@@ -12,7 +12,9 @@ function solution(pf){
         else{
             let rt = stack.pop();
             let lt = stack.pop();
-
+// .pop() 순서가 중요한 이유
+// -,/ 기호에 따라서 값이 달라짐
+// 즉, 무엇을 먼저 빼느냐 를 정해주고 이를 식에 대입하는것이 중요 
             if(x ==='+') stack.push(lt+rt);
             else if(x ==='-') stack.push(lt-rt);
             else if(x ==='*') stack.push(lt*rt);
