@@ -7,14 +7,6 @@ function solution(S,WL){
         
             if(!CacheList.includes(x)){
                 
-                let N = CacheList.length;
-                for(let i=0; i<N; i++){
-
-                    for(let j=0; j<N; j++){
-                        
-
-                    }
-                }
             }        
     })
 
@@ -26,15 +18,15 @@ console.log(solution(5,WorkList));
 
 
 
-1. CacheList , WL 비교 후 CacheList 에 WL index 가 없으면
-     
-    forEach.(WL)
-    for() CL {
-        if WL index 없으면 {
-            for(i){
-                for(j)
-            }
-            CacheList 
-        }
-    }
+// 1. CacheList , WL 비교 후 CacheList 에 WL index 가 없으면
+
+//     forEach.(WL)
+//     for() CL {
+//         if WL index 없으면 {
+//             for(i){
+//                 for(j)
+//             }
+//             CacheList 
+//         }
+//     }
 
