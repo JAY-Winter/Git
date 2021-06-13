@@ -1,13 +1,13 @@
 function solution(participant, completion) {
     
-    var answer = [];
+    var answer = "";
     let marathon = new Set();
 
     for(let x of participant) marathon.add(x);
-
+    
     if(marathon.size = participant.length){
         for(let y of completion){
-            if(!marathon.has(y)) answer.push(y);
+            if(!marathon.has(y)) answer += y;
         }
     }    
     return answer;
