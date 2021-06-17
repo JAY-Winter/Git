@@ -2,7 +2,7 @@ function solution(A,target){
 
     let answer;
     let Lt=0, Rt=A.length-1;
-    
+
     A.sort((a,b)=>a-b);
 
     while(Lt<=Rt){
@@ -13,15 +13,7 @@ function solution(A,target){
         }
         else if(A[mid]>target) Rt=mid-1;
         else Lt=mid+1;
-
     }
-
-
-
-    
-    
-
-
     return answer;
 }
 
