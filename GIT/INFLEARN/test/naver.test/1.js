@@ -1,41 +1,24 @@
-// function solution(A){
-//     let answer = [];
+
+function solution(arr){
     
-//     for(let i=0; i<A.length-1; i++){
-//         let count = 0;
-//         for(let j=i+1; j<A.length;){
-//             if(A[i]===A[j]) {
-//                 count++;
-//             }
-//             answer.push(count);
-//         }
-//     }
-//     return answer;
-// }
-
-// let arr = [1,2,3,3,3,3,4,4];
-// console.log(solution(arr));
-
-
-
-function solution(A){
-    let answer = [];
-    let count = 1;
-
-    for(let i=0; i<A.length-1; i++){
-        let pos = i;
-
-        for(let j=i+1; j<A.length; j++){
-            if(A[i] !== A[j]) break;
-            
-            else{
-                count++;
-            }
-        }
+    let answer =[];
+    let map = new Map();
+    
+    arr.forEach(x=> {
         
-        answer.push(count);
-        count = 1;
+        if(map.has(x)){
+            map.set(x, map.get(x)+1);
+        }
+        else{
+            map.set(x,1);
+        }
+    });
+
+
+    for(let [key,val] of map){
+        if(val>1) answer.push(val);
     }
+
     return answer;
 }
 
