@@ -1,8 +1,27 @@
-// https://velog.io/@proshy/JS%EB%AA%A8%EB%93%A0-%EB%B6%80%EB%B6%84-%EC%A7%91%ED%95%A9%EB%A9%B1%EC%A7%91%ED%95%A9-%EA%B5%AC%ED%95%98%EA%B8%B0 
-// 참고
+function solution(n){
+    let answer = [];
 
-function powerSet(arr,n){
-    let check = new Array({length:n},()=> 0);
+    let ch = Array.from({length:n+1},()=>0);
+
+    function DFS(L){
+
+        if(L===n+1){
+            let tmp = "";
+
+            for(let i=1; i<=n; i++){
+                if(ch[i]===1) tmp += i+" ";
+            }    
+            if(tmp.length>0) answer.push(tmp.trim());
+        }
+        else{
+            ch[L]=1;
+            DFS(L+1);
+            ch[L]=0;
+            DFS(L+1);
+        }
+    }
+    DFS(1)
+    return answer;
 }
-console.log(check);
-powerSet(arr,3);
+
+console.log(solution(3)); 

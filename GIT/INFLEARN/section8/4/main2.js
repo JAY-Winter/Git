@@ -25,9 +25,3 @@ function solution(n){
 console.log(solution(3));
 
 
-
-
-D(1) ch = [0,1,0,0] -> DFS(2)
-D(2) ch = [0,1,1,0] -> DFS(3)
-D(3) ch = [0,0,0,3] -> DFS(4)
-D(4) let
