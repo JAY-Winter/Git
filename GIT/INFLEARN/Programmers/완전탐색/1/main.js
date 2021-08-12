@@ -8,20 +8,29 @@ function solution(answers) {
 
     var count1 = 0;
 
+    
     function count(answers,N){
+                
+        
         answers.forEach((x)=>{
-            for(let i of N){
-                if(x===i) count1++;
-            }
-        })
+            console.log(x);
+        });
+            // let x=0;
+            // for(let i=0; i<N.length; i++){
+
+            //     console.log(answers[x++],N[i]);
+
+            // }
+        // }
+
         answer.push(count1);
         count1=0;
     }
 
-    count(answers,a);
+    // count(answers,a);
     count(answers,b);
-    count(answers,c);
-    
+    // count(answers,c);
+
     return answer;
 }
 
